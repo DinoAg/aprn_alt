@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+nav {
+  background-color: #3b7dd8;
+  display: flex;
+  flex-wrap: wrap;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+  width: 69%;
+  justify-content: flex-end;
+  padding-top: 3%;
+}
+nav ul li {
+  font-size: small;
+  padding: 2%;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+nav img {
+  padding: 2% 0 2% 0;
+  margin-right: 5%;
+  width: 25%;
+}
+.active,
+nav ul li:hover {
+  background: #0296c0;
+  border-radius: 10%;
+}
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.main h1 {
+  width: 100%;
+  margin: 1%;
+  padding-left: 5%;
+  text-align: left;
+  font-size: 2.8em;
+  font-weight: 650;
+  letter-spacing: 1.5px;
+}
+.main .gallery {
+  position: relative;
+  width: 90%;
+  height: auto;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 2vh;
+  grid-auto-flow: dense;
+}
+.main .gallery .img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid #017bf5;
+}
+.main .gallery .img:first-child {
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+}
+.main .gallery .img:nth-child(2n + 3) {
+  grid-row-start: span 2;
+}
+.main .gallery .img:nth-child(4n + 5) {
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+}
+.main .gallery .img:nth-child(6n + 7) {
+  grid-row-start: span 1;
+}
+.main .gallery .img:nth-child(8n + 9) {
+  grid-row-start: span 1;
+  grid-row-start: span 1;
+}
+.main .gallery .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 1.8em;
+    width: 400px;
+  }
+  .main .gallery {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+}
+@media only screen and (min-width: 768px) (max-width: 991px) {
+  h1 {
+    font-size: 1.8em;
+    width: 400px;
+  }
+  .main .gallery {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+}
+footer {
+  background-color: #4a91f2;
+  text-align: center;
+  margin-top: 5%;
+}
